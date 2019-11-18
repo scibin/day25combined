@@ -24,7 +24,7 @@ deploy:
   provider: heroku
   api_key:
     secure: "J5hTVfXtta6t2PahbHYndJKeeoT0d+epOmYg2dhD9dZhmuvUik9cAosbSt3I2NETrnaIxgFt3Cc1YAxRkpaz8nQ1GeMQNmdW9bd5vgF0Fl5dktJu0HD4LykMKk9R4RkkadhZEdrSV/Cx9nzU660Xm3nBD4zuuZXRwQhjHT7xkeBf212W3gdG/rsMexbFnXrRaAqy0Px/VIRzpW5gJAOfl11naOd0vjhczfIy0mm0LKckp+HT1wZltAEnzi2DkPJ5oS3SZiNYTu9ZuuvN9BkHndPQcUxx2pKlnY6jWsFgDLxmrzX0cWePQj6yNC0h5BE5OKpZqWB/HzRCMu93zFcCSe5lGLoXhVvT24eiw5kAcLwIqnTZn6StbiOmA8Wl4tNsAwDYzXCQsnjpgQURTKLl2e+BoKaUOkr7osLmm2KmtDAGNTGJkl+RR98VLcqzO4s0XAWAUu3VtPzS4inegNCwQYhIQPUrPUOvoDlVr/rgUgs/uUKiIFd+T7rHhRkhGJW53BASsTBlEsge3qu5nbCrtx5YZh9+QQtv0f0GekbtJrUmAf/qxPTdazOd+xiGG/kcf3ZeZsrU+JNW84ju8slBCXmpVLwj8nMvkmHEh9RSdieU+mYB9sHm4KQMpn/LtuYRsgA82iyHvnxtRlSKicHQz+2BojdBDgUrci876vIwE74="
-  app: day25simple
+  app: day25combined
   skip_cleanup: true
   on:
     branch: branchedaway

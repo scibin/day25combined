@@ -11,7 +11,8 @@ branches:
   - branchedaway
 
 before_script:
-  - npm install --prefix /server
+  - mkdir -p ./server/node_modules
+  - npm install --prefix ./server
   - cd client && npm install
   - npm install -g @angular/cli
 

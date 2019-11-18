@@ -1,0 +1,50 @@
+<h3>Upload article: </h3>
+
+<form #form="ngForm" (ngSubmit)="submitArticle(form)">
+    <label for='title'>Title: </label>
+    <br>
+    <input type="text" name='title' id='title'
+    placeholder="Title of article" ngModel>
+    <br>
+    
+    <label for='email'>By: </label>
+    <br>
+    <input type="email" name='email' id='email'
+    placeholder="Author's email" ngModel>
+    <br>
+
+    <label for='article'>Article: </label>
+    <br>
+    <textarea id="article" name="article" cols="30" rows="10"
+    placeholder="Insert article content here" ngModel></textarea>
+    <br>
+
+    <label for='imageFile'>Image: </label>
+    <br>
+    <input type="file" name='imageFile' id='imageFile' 
+    ngModel #imageFile accept='image/*'>
+    <!-- input multiple -->
+    <br>
+
+    <br>
+    <button type="submit">Upload image...</button>
+</form>
+
+<hr>
+
+<form #anotherform="ngForm" (ngSubmit)="submitImages(form)">
+    <h4>Upload multiple images: </h4>
+    <input type="file" name='imageFiles' id='imageFiles' 
+    ngModel #imageFiles accept='image/*' multiple>
+    <br>
+    <button type="submit">Upload multiple images...</button>
+</form>
+
+<hr>
+<button type='button' (click)="getAllImages()">Get all images using s3 listObjects</button>
+<hr>
+
+<div *ngFor="let img of ImgArray.urls; let i = index">
+    <span>Image {{ i+1 }}:</span><br>
+    <img [src]=img alt='' height='auto' width="400">
+</div>

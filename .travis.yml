@@ -19,7 +19,7 @@ before_script:
 script:
   - ng lint
   - ng build --prod
-  - bash scripts/build.sh
+  - bash `${TRAVIS_BUILD_DIR}/scripts/build.sh`
 
 deploy:
   provider: heroku

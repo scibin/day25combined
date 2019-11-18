@@ -11,7 +11,7 @@ branches:
   - branchedaway
 
 before_script:
-  - ./build.sh
+  - chmod ugo+x ./build.sh
   - npm install -g @angular/cli
 
 script:

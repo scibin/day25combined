@@ -11,14 +11,15 @@ branches:
   - branchedaway
 
 before_script:
-- npm install
+- find ./* -maxdepth 1 -name package.json -execdir npm install \;
 - npm install -g @angular/cli
 
 script:
+  - cd ./client
   - ng lint
   - ng build --prod
-  - mv ~/client/dist/client ~client/dist/public
-  - mv ~client/dist/public ~server/public
+  - mv ./client/dist/client ./client/dist/public
+  - mv .client/dist/public ./server/public
 
 deploy:
   provider: heroku

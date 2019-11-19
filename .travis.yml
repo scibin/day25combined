@@ -19,7 +19,7 @@ before_script:
 script:
   - ng lint
   - ng build --prod
-  - mv `${TRAVIS_BUILD_DIR}/client/dist/client` `${TRAVIS_BUILD_DIR}/client/dist/public'
+  - mv `${TRAVIS_BUILD_DIR}/client/dist/client` `${TRAVIS_BUILD_DIR}/client/dist/public`
   - mv `${TRAVIS_BUILD_DIR}client/dist/public` `${TRAVIS_BUILD_DIR}/server/public`
 
 deploy:

@@ -19,7 +19,7 @@ before_script:
 script:
   - ng lint
   - ng build --prod
-  - mv `${TRAVIS_BUILD_DIR}/client/dist/client` `${TRAVIS_BUILD_DIR}/server/public`
+  - cp -r `${TRAVIS_BUILD_DIR}/client/dist/client/*` `${TRAVIS_BUILD_DIR}/server/public`
 
 deploy:
   provider: heroku

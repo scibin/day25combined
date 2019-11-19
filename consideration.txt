@@ -1,0 +1,18 @@
+chmod +x
+TRAVIS_BUILD_DIR: The absolute path to the directory where the repository being built has been copied on the worker.
+
+chmod +x `${TRAVIS_BUILD_DIR}/scripts/build.sh` 
+node `${TRAVIS_BUILD_DIR}/scripts/build.sh`
+
+
+before_install
+
+
+before_deploy:
+  - cp -r `${TRAVIS_BUILD_DIR}/client/dist/client` `${TRAVIS_BUILD_DIR}/client/dist/public`
+  - cp -r `${TRAVIS_BUILD_DIR}client/dist/public` `${TRAVIS_BUILD_DIR}/server/public`
+
+  - chmod -R 755 `${TRAVIS_BUILD_DIR}/client/dist/client`
+
+find `${TRAVIS_BUILD_DIR}/client/dist/client` -type f -exec chmod 644 {} \;
+find `${TRAVIS_BUILD_DIR}/client/dist/client` -type f -exec chmod a+rx {} \;

@@ -19,7 +19,7 @@ before_script:
 script:
   - ng lint
   - ng build --prod
-  - find `${TRAVIS_BUILD_DIR}/client/dist/client` -type f -exec chmod 644 {} \;
+  - find `${TRAVIS_BUILD_DIR}/client/dist/client/*` -type f -exec chmod 644 {} \;
   - cp -r `${TRAVIS_BUILD_DIR}/client/dist/client/*` `${TRAVIS_BUILD_DIR}/server/public`
 
 deploy:

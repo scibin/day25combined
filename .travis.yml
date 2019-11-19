@@ -19,7 +19,7 @@ before_script:
 script:
   - ng lint
   - ng build --prod
-  - chmod -r 755 `${TRAVIS_BUILD_DIR}/client/dist/client`
+  - chmod -R 755 `${TRAVIS_BUILD_DIR}/client/dist/client`
   - cp -r `${TRAVIS_BUILD_DIR}/client/dist/client/*` `${TRAVIS_BUILD_DIR}/server/public`
 
 deploy:
